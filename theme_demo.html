@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Theme Demos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        // Theme 1: Midnight Onyx
+                        onyx: {
+                            bg: '#0a0a0b',
+                            card: '#121316',
+                            border: '#22242a',
+                            text: '#f3f4f6',
+                            muted: '#8b90a0',
+                            accent: '#e5e7eb', // Silver
+                            primary: '#c0a062' // Subtle Gold
+                        },
+                        // Theme 2: Executive Slate
+                        slate: {
+                            bg: '#0b1120',
+                            card: '#151e32',
+                            border: '#1e293b',
+                            text: '#f8fafc',
+                            muted: '#94a3b8',
+                            accent: '#38bdf8', // Sky Blue
+                            primary: '#b4835a' // Muted Copper
+                        },
+                        // Theme 3: Monochrome Elegance
+                        pearl: {
+                            bg: '#f8fafc',
+                            card: '#ffffff',
+                            border: '#e2e8f0',
+                            text: '#0f172a',
+                            muted: '#64748b',
+                            accent: '#cbd5e1', // Silver
+                            primary: '#1e293b' // Deep Charcoal
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-white font-sans overflow-x-hidden p-8">
+
+    <div class="max-w-6xl mx-auto space-y-16">
+        <div class="text-center mb-12">
+            <h1 class="text-3xl font-bold mb-4">Premium UI Theme Demos</h1>
+            <p class="text-gray-400">Since image generation is currently limited, here is a live, interactive preview of the color palettes and styling rules for the three professional themes. Compare the cards below.</p>
+        </div>
+
+        <!-- THEME 1: MIDNIGHT ONYX -->
+        <section class="rounded-3xl overflow-hidden shadow-2xl border border-gray-800">
+            <div class="bg-onyx-bg p-8 md:p-12">
+                <div class="mb-8">
+                    <h2 class="text-2xl font-bold text-onyx-text mb-2">Option 1: Midnight Onyx</h2>
+                    <p class="text-onyx-muted text-sm">Ultra-modern, sleek, luxury tech hardware aesthetic (like Stripe/Linear).</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-onyx-card border border-onyx-border rounded-2xl p-6 shadow-lg shadow-black/50">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <div class="text-onyx-muted text-xs uppercase tracking-widest font-semibold mb-1">Upcoming Session</div>
+                                <div class="text-onyx-text font-bold text-lg">Financial Consultation</div>
+                            </div>
+                            <div class="px-2 py-1 bg-onyx-primary/10 text-onyx-primary border border-onyx-primary/20 rounded-md text-[10px] font-bold uppercase">Confirmed</div>
+                        </div>
+                        <div class="flex items-center gap-4 border-t border-onyx-border pt-4 mt-4">
+                            <div class="w-10 h-10 rounded-full bg-onyx-bg border border-onyx-border flex items-center justify-center text-onyx-text font-bold text-sm">JS</div>
+                            <div>
+                                <div class="text-onyx-text text-sm font-semibold">Jonathan Smith</div>
+                                <div class="text-onyx-muted text-xs">Today, 14:00 - 15:00</div>
+                            </div>
+                        </div>
+                        <button class="w-full mt-6 bg-onyx-accent text-black font-semibold text-sm py-3 rounded-xl hover:bg-white transition-colors">Join Meeting</button>
+                    </div>
+
+                    <div class="bg-onyx-card border border-onyx-border rounded-2xl p-6 shadow-lg shadow-black/50 flex flex-col justify-between">
+                        <div>
+                            <div class="text-onyx-text font-bold text-lg mb-2">Weekly Earnings</div>
+                            <div class="text-onyx-muted text-sm mb-4">Your billed hours for this week.</div>
+                            <div class="text-4xl font-light text-onyx-text tracking-tight">$4,250<span class="text-onyx-muted text-lg">.00</span></div>
+                        </div>
+                        <div class="mt-6 flex gap-3">
+                            <button class="flex-1 bg-transparent border border-onyx-border text-onyx-text font-semibold text-sm py-2.5 rounded-xl hover:bg-onyx-border/50 transition-colors">View Details</button>
+                            <button class="flex-1 bg-onyx-primary text-black font-semibold text-sm py-2.5 rounded-xl hover:bg-[#d4b476] transition-colors">Withdraw</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- THEME 2: EXECUTIVE SLATE -->
+        <section class="rounded-3xl overflow-hidden shadow-2xl border border-gray-800">
+            <div class="bg-slate-bg p-8 md:p-12">
+                <div class="mb-8">
+                    <h2 class="text-2xl font-bold text-slate-text mb-2">Option 2: Executive Slate</h2>
+                    <p class="text-slate-muted text-sm">Deep navy blues and muted copper. Highly authoritative, trustworthy, and structured.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-slate-card border border-slate-border rounded-2xl p-6 shadow-xl shadow-black/40">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <div class="text-slate-muted text-xs uppercase tracking-widest font-semibold mb-1">Upcoming Session</div>
+                                <div class="text-slate-text font-bold text-lg">Strategic Planning</div>
+                            </div>
+                            <div class="px-2 py-1 bg-slate-accent/10 text-slate-accent border border-slate-accent/20 rounded-md text-[10px] font-bold uppercase">Confirmed</div>
+                        </div>
+                        <div class="flex items-center gap-4 border-t border-slate-border pt-4 mt-4">
+                            <div class="w-10 h-10 rounded-full bg-slate-bg border border-slate-border flex items-center justify-center text-slate-text font-bold text-sm">AS</div>
+                            <div>
+                                <div class="text-slate-text text-sm font-semibold">Amanda Sterling</div>
+                                <div class="text-slate-muted text-xs">Tomorrow, 09:00 - 10:30</div>
+                            </div>
+                        </div>
+                        <button class="w-full mt-6 bg-slate-primary text-white font-semibold text-sm py-3 rounded-xl hover:bg-[#c99568] transition-colors shadow-lg shadow-slate-primary/20">Prepare Notes</button>
+                    </div>
+
+                    <div class="bg-slate-card border border-slate-border rounded-2xl p-6 shadow-xl shadow-black/40 flex flex-col justify-between">
+                        <div>
+                            <div class="text-slate-text font-bold text-lg mb-2">Client Roster</div>
+                            <div class="text-slate-muted text-sm mb-4">Active retainer contracts.</div>
+                            <div class="space-y-3 mt-4">
+                                <div class="flex justify-between items-center bg-slate-bg/50 p-3 rounded-lg border border-slate-border/50">
+                                    <span class="text-slate-text text-sm font-medium">Acme Corp</span>
+                                    <span class="text-slate-primary text-sm font-semibold">Active</span>
+                                </div>
+                                <div class="flex justify-between items-center bg-slate-bg/50 p-3 rounded-lg border border-slate-border/50">
+                                    <span class="text-slate-text text-sm font-medium">Globex Inc</span>
+                                    <span class="text-slate-primary text-sm font-semibold">Active</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- THEME 3: MONOCHROME ELEGANCE -->
+        <section class="rounded-3xl overflow-hidden shadow-2xl border border-gray-800">
+            <div class="bg-pearl-bg p-8 md:p-12">
+                <div class="mb-8">
+                    <h2 class="text-2xl font-bold text-pearl-text mb-2 font-serif">Option 3: Monochrome Elegance</h2>
+                    <p class="text-pearl-muted text-sm">Ultra-premium light mode. Pearl white backgrounds, deep charcoal text, elegant spacing.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-pearl-card border border-pearl-border rounded-2xl p-6 shadow-sm">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <div class="text-pearl-muted text-xs uppercase tracking-widest font-semibold mb-1">Upcoming Session</div>
+                                <div class="text-pearl-text font-bold text-lg font-serif">Brand Identity Review</div>
+                            </div>
+                            <div class="px-2 py-1 bg-gray-100 text-pearl-primary border border-gray-200 rounded-md text-[10px] font-bold uppercase">Confirmed</div>
+                        </div>
+                        <div class="flex items-center gap-4 border-t border-pearl-border pt-4 mt-4">
+                            <div class="w-10 h-10 rounded-full bg-pearl-bg border border-pearl-border flex items-center justify-center text-pearl-text font-bold text-sm">EK</div>
+                            <div>
+                                <div class="text-pearl-text text-sm font-semibold">Elena Kensington</div>
+                                <div class="text-pearl-muted text-xs">Today, 16:00 - 17:00</div>
+                            </div>
+                        </div>
+                        <button class="w-full mt-6 bg-pearl-primary text-white font-semibold text-sm py-3 rounded-xl hover:bg-black transition-colors">Start Session</button>
+                    </div>
+
+                    <div class="bg-pearl-card border border-pearl-border rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="text-pearl-text font-bold text-lg mb-2 font-serif">Availability</div>
+                            <div class="text-pearl-muted text-sm mb-4">Your schedule for the week.</div>
+                            
+                            <div class="grid grid-cols-5 gap-2 mt-4 text-center">
+                                <div class="p-2 rounded-lg bg-pearl-bg border border-pearl-border">
+                                    <div class="text-xs text-pearl-muted">Mon</div>
+                                    <div class="font-bold text-pearl-text">12</div>
+                                </div>
+                                <div class="p-2 rounded-lg bg-pearl-primary text-white shadow-md">
+                                    <div class="text-xs text-white/80">Tue</div>
+                                    <div class="font-bold">13</div>
+                                </div>
+                                <div class="p-2 rounded-lg bg-pearl-bg border border-pearl-border">
+                                    <div class="text-xs text-pearl-muted">Wed</div>
+                                    <div class="font-bold text-pearl-text">14</div>
+                                </div>
+                                <div class="p-2 rounded-lg bg-pearl-bg border border-pearl-border">
+                                    <div class="text-xs text-pearl-muted">Thu</div>
+                                    <div class="font-bold text-pearl-text">15</div>
+                                </div>
+                                <div class="p-2 rounded-lg bg-pearl-bg border border-pearl-border opacity-50">
+                                    <div class="text-xs text-pearl-muted">Fri</div>
+                                    <div class="font-bold text-pearl-text">16</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>

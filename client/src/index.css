@@ -1,0 +1,154 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;500;600;700&display=swap');
+
+@theme {
+  --color-dark-950: #0a0a0b;
+  --color-dark-900: #121316;
+  --color-dark-800: #181a1f;
+  --color-dark-700: #22242a;
+  --color-dark-600: #2c2f36;
+  --color-dark-500: #8b90a0;
+  
+  --color-accent-500: #c0a062;
+  --color-accent-600: #b09055;
+  
+  --font-syne: "Syne", sans-serif;
+  --font-mono: "DM Mono", monospace;
+  
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+}
+
+:root {
+  color-scheme: dark;
+  font-size: 90%;
+}
+
+.theme-dark {
+  color-scheme: dark;
+}
+
+.theme-light {
+  color-scheme: light;
+  --color-dark-950: #f1f5f9;
+  --color-dark-900: #ffffff;
+  --color-dark-800: #eef2f7;
+  --color-dark-700: #dde6f1;
+  --color-dark-600: #c6d2e1;
+  --color-dark-500: #8fa2ba;
+}
+
+body {
+  @apply bg-dark-950 text-slate-200 font-syne antialiased;
+  min-height: 100vh;
+}
+
+.theme-light body {
+  color: #0f172a;
+  background-image: radial-gradient(circle at 20% 10%, rgba(108, 143, 255, 0.08), transparent 35%),
+                    radial-gradient(circle at 80% 90%, rgba(99, 102, 241, 0.06), transparent 30%);
+}
+
+/* Glassmorphism utility - Midnight Onyx (Sleek, minimal blur, stark lines) */
+@utility glass {
+  @apply bg-dark-900/80 backdrop-blur-md border border-white/5;
+}
+
+.glass-card {
+  @apply glass rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.5)];
+}
+
+/* Force better contrast for the gold accent */
+.bg-accent-500, .hover\:bg-accent-600:hover, .bg-accent-600 {
+  color: #000000 !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-dark-950;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-dark-600 rounded-full hover:bg-dark-500 transition-colors;
+}
+
+/* Transitions */
+.transition-standard {
+  @apply transition-all duration-200 ease-out;
+}
+
+/* Custom scrollbar utility class (used in dashboards) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-dark-600 rounded-full;
+}
+
+/* Light-mode utility overrides for existing dark-first classes */
+.theme-light .text-white { color: #0f172a !important; }
+.theme-light .text-slate-200 { color: #1e293b !important; }
+.theme-light .text-slate-300 { color: #334155 !important; }
+.theme-light .text-slate-400 { color: #475569 !important; }
+.theme-light .text-slate-500 { color: #64748b !important; }
+.theme-light .text-slate-600 { color: #64748b !important; }
+.theme-light .text-slate-700 { color: #94a3b8 !important; }
+.theme-light [class*="bg-white/"] { background-color: rgba(15, 23, 42, 0.06) !important; }
+.theme-light [class*="border-white/"] { border-color: rgba(15, 23, 42, 0.12) !important; }
+.theme-light [class*="shadow-white/"] { box-shadow: 0 8px 20px rgba(15, 23, 42, 0.07) !important; }
+
+/* Light mode depth + modern rectangular shadows */
+.theme-light .glass {
+  background: rgba(255, 255, 255, 0.88) !important;
+  border: 1px solid rgba(15, 23, 42, 0.12) !important;
+  backdrop-filter: blur(6px);
+}
+
+.theme-light .glass-card {
+  border-radius: 16px !important;
+  border: 1px solid rgba(15, 23, 42, 0.12) !important;
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.08),
+    0 2px 0 rgba(15, 23, 42, 0.04) inset !important;
+}
+
+.theme-light [class*="bg-dark-900"],
+.theme-light [class*="bg-dark-800"],
+.theme-light [class*="bg-dark-700"] {
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+}
+
+.theme-light button,
+.theme-light a[class*="bg-"],
+.theme-light input,
+.theme-light select,
+.theme-light textarea {
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+}
+
+.theme-light button:hover,
+.theme-light a[class*="bg-"]:hover {
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.theme-light .bg-accent-500,
+.theme-light .hover\:bg-accent-600:hover {
+  box-shadow: 0 12px 24px rgba(108, 143, 255, 0.35) !important;
+}
+
+/* min-header-screen alias (used in Auth.jsx) */
+.min-header-screen {
+  min-height: 100vh;
+}
+
+/* Shimmer animation for landing page hero gradient text */
+@keyframes shimmer {
+  0%   { background-position: 0% center; }
+  50%  { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+.animate-\[shimmer_3s_ease_infinite\] {
+  animation: shimmer 3s ease infinite;
+}
